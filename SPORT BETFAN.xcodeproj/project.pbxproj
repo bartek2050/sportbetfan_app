@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		98177EE626B93DC500BCE277 /* sportbetfan_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sportbetfan_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98177EE626B93DC500BCE277 /* SPORT BETFAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SPORT BETFAN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98177EE926B93DC500BCE277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98177EEB26B93DC500BCE277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		98177EED26B93DC500BCE277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		98177EE726B93DC500BCE277 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98177EE626B93DC500BCE277 /* sportbetfan_app.app */,
+				98177EE626B93DC500BCE277 /* SPORT BETFAN.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		98177EE526B93DC500BCE277 /* sportbetfan_app */ = {
+		98177EE526B93DC500BCE277 /* SPORT BETFAN */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98177EFA26B93DC900BCE277 /* Build configuration list for PBXNativeTarget "sportbetfan_app" */;
+			buildConfigurationList = 98177EFA26B93DC900BCE277 /* Build configuration list for PBXNativeTarget "SPORT BETFAN" */;
 			buildPhases = (
 				98177EE226B93DC500BCE277 /* Sources */,
 				98177EE326B93DC500BCE277 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = sportbetfan_app;
+			name = "SPORT BETFAN";
 			productName = sportbetfan_app;
-			productReference = 98177EE626B93DC500BCE277 /* sportbetfan_app.app */;
+			productReference = 98177EE626B93DC500BCE277 /* SPORT BETFAN.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 98177EE126B93DC500BCE277 /* Build configuration list for PBXProject "sportbetfan_app" */;
+			buildConfigurationList = 98177EE126B93DC500BCE277 /* Build configuration list for PBXProject "SPORT BETFAN" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				98177EE526B93DC500BCE277 /* sportbetfan_app */,
+				98177EE526B93DC500BCE277 /* SPORT BETFAN */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		98177EE126B93DC500BCE277 /* Build configuration list for PBXProject "sportbetfan_app" */ = {
+		98177EE126B93DC500BCE277 /* Build configuration list for PBXProject "SPORT BETFAN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98177EF826B93DC900BCE277 /* Debug */,
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98177EFA26B93DC900BCE277 /* Build configuration list for PBXNativeTarget "sportbetfan_app" */ = {
+		98177EFA26B93DC900BCE277 /* Build configuration list for PBXNativeTarget "SPORT BETFAN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98177EFB26B93DC900BCE277 /* Debug */,
