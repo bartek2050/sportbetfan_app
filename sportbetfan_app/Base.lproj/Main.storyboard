@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,13 +12,12 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SPORT_BETFAN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-83-fVb">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPw-TT-yJG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -27,18 +25,44 @@
                             </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.30980392159999998" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mPw-TT-yJG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6wo-LR-lJF"/>
+                            <constraint firstItem="mPw-TT-yJG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T1f-hG-orh"/>
+                            <constraint firstItem="mPw-TT-yJG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dLc-lx-g4j"/>
+                            <constraint firstItem="mPw-TT-yJG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zvV-bv-VOa"/>
+                        </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Back" image="arrow.left" catalog="system" id="X7U-9l-SRK"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="FiT-Hn-SQq"/>
-                        <barButtonItem title="Home" image="homekit" catalog="system" id="D7c-41-HZY"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OiN-5L-7qe"/>
-                        <barButtonItem title="1x2" image="12.square" catalog="system" id="V14-fb-vl8"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="UX1-aE-Rod"/>
-                        <barButtonItem title="BETFAN" id="fL0-sB-ckZ"/>
+                        <barButtonItem image="back" id="JPy-8I-IGD">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-6"/>
+                            <connections>
+                                <action selector="backBtn:" destination="BYZ-38-t0r" id="sK9-cF-NUi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="SNF-LB-Mwf"/>
+                        <barButtonItem image="home" id="gWc-OJ-mf1">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-6"/>
+                            <connections>
+                                <action selector="home:" destination="BYZ-38-t0r" id="cFr-D8-DFi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eFS-0o-Jix"/>
+                        <barButtonItem image="star" id="ENa-FY-lyP">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-6"/>
+                            <connections>
+                                <action selector="topBets:" destination="BYZ-38-t0r" id="koF-ba-Nnu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="mTl-gB-fin"/>
+                        <barButtonItem image="betfan" id="7oh-0N-hPz">
+                            <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-6"/>
+                            <connections>
+                                <action selector="betfan:" destination="BYZ-38-t0r" id="Hfg-lN-aSb"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="HSX-Ba-Efk"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="HSX-Ba-Efk"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -48,17 +72,22 @@
         <!--Navigation Controller-->
         <scene sceneID="xus-oA-yZ1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="tbf-O7-Ifa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="tbf-O7-Ifa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IiF-UZ-PYU">
-                        <autoresizingMask key="autoresizingMask"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="IiF-UZ-PYU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.30980392159999998" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.30980392159999998" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="5iA-fH-AZ4">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="mdt-EF-Q1D">
                         <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.30980392159999998" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lt2-cP-TkA"/>
@@ -70,11 +99,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="12.square" catalog="system" width="128" height="114"/>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="homekit" catalog="system" width="128" height="106"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="back" width="72" height="72"/>
+        <image name="betfan" width="75" height="58"/>
+        <image name="home" width="72" height="72"/>
+        <image name="star" width="72" height="72"/>
     </resources>
 </document>

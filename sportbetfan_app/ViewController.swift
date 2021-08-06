@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -38,16 +39,31 @@ class ViewController: UIViewController {
             }
             
         }
-        
-        
     }
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         webView.frame = view.bounds
     }
-
-
+    
+    @IBAction func backBtn(_ sender: Any) {
+        if webView.canGoBack {
+            webView.goBack()
+        }
+    }
+    
+    @IBAction func home(_ sender: Any) {
+        let url = URL(string: "https://sport.betfan.pl/")!
+        webView.load(URLRequest(url: url))
+    }
+    
+    @IBAction func topBets(_ sender: Any) {
+        let url = URL(string: "https://sport.betfan.pl/typowanie/")!
+        webView.load(URLRequest(url: url))
+    }
+    
+    @IBAction func betfan(_ sender: UIButton) {
+        UIApplication.shared.open(URL(string: "https://betfan.pl/zaklady-bukmacherskie")! as URL, options: [:], completionHandler: nil)
+    }
+    
 }
-
